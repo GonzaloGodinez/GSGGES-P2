@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS gsgges_db;
+CREATE DATABASE gsgges_db;
