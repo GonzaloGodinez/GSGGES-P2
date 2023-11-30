@@ -1,11 +1,11 @@
 const { Model, DataTypes, INTEGER } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Comment extends Model {
+class Books extends Model {
 
 }
 
-Comment.init(
+Books.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -13,29 +13,22 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    comment: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    date_created: {
-      type: DataTypes.DATE,
+    author: {
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
-    user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: "user", 
-            key: "id"
-        }
+    pages: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
-    post_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: "post",
-            key: "id",
-        }
-    },
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }, 
   },
 
   {
@@ -43,10 +36,8 @@ Comment.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment',
+    modelName: 'books',
   }
 );
 
-module.exports = Comment;
-
-// comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
+module.exports = Books;
