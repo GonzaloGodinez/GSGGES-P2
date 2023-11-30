@@ -4,6 +4,5 @@ const bookRoutes = require('./bookRoutes');
 
 router.use('/book', bookRoutes);
 router.use('/users', userRoutes);
-router.use('/books', projectRoutes);
 
 module.exports = router;
