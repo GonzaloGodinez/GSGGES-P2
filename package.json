@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "name": "blogg_Tech",
+=======
   "name": "crowd-funding",
+>>>>>>> 3b9caa5367af9a958d9ab822ba398b9142420519
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -20,10 +24,13 @@
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
+<<<<<<< HEAD
+=======
   },
   "devDependencies": {
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "prettier": "^2.1.2"
+>>>>>>> 3b9caa5367af9a958d9ab822ba398b9142420519
   }
 }
