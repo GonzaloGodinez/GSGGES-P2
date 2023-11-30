@@ -22,17 +22,17 @@ userBooks.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-          model: "user", 
-          key: "id"
+        model: "user",
+        key: "id"
       }
-  },
-  book_id: {
+    },
+    book_id: {
       type: DataTypes.INTEGER,
       references: {
-          model: "book",
-          key: "id",
+        model: "book",
+        key: "id",
       }
-  },
+    },
   },
 
   {
