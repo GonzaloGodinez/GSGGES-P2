@@ -6,38 +6,43 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Add new book</h3>
+    <h3>Add a New Book:</h3>
 
-    <form class="form new-project-form">
+    <form class="form new-book-form">
       <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
+        <label for="book-title">Book Title:</label>
+        <input class="form-input" type="text" id="book-title" name="book-title" />
       </div>
       <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="the-tech-blog" name="the-tech-blog" />
+        <label for="book-author">Author:</label>
+        <input class="form-input" type="text" id="book-author" name="book-author" />
       </div>
       <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+        <label for="book-genre">Genre:</label>
+        <select class="form-input" id="book-genre" name="book-genre">
+          <option value="romance">Romance</option>
+          <option value="adventure">Adventure</option>
+          <!-- Add more genre options here -->
+        </select>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Add Book</button>
       </div>
     </form>
   </div>
 
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Books to read:</h3>
+  {{#if books.length}}
+  <div class="col-md-6 book-list">
+    <h3>Books to Read:</h3>
 
     {{#each books as |book|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+        <h4><a href="/book/{{book.id}}">{{book.title}}</a> by {{book.author}}</h4>
+        <p>Genre: {{book.genre}}</p>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{book.id}}">REMOVE</button>
       </div>
     </div>
     {{/each}}
