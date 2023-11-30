@@ -1,9 +1,5 @@
 const router = require('express').Router();
-controllers/api/bookRoute.js
 const { Book } = require('../../models');
-
-const { Project } = require('../../models');
-feature/controllers/api/bookRoutes.js
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
