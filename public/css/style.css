@@ -22,3 +22,11 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+body {
+  background-image: url('https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  /* Additional properties for background */
+  background-size: cover; /* Adjust the size of the background image */
+  background-position: center; /* Position the image within the element */
+  /* You can add more properties like repeat, attachment, etc. */
+}
