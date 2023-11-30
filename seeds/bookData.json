@@ -1,531 +1,455 @@
 [
   {
-    "id": 1,
     "title": "The Catcher in the Rye",
     "author": "J.D. Salinger",
     "pages": 224,
     "genre": "Fiction"
   },
   {
-    "id": 2,
     "title": "To Kill a Mockingbird",
     "author": "Harper Lee",
     "pages": 281,
     "genre": "Classic"
   },
   {
-    "id": 3,
     "title": "1984",
     "author": "George Orwell",
     "pages": 328,
     "genre": "Dystopian"
   },
   {
-    "id": 4,
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "pages": 180,
     "genre": "Classic"
   },
   {
-    "id": 5,
     "title": "Harry Potter and the Sorcerer's Stone",
     "author": "J.K. Rowling",
     "pages": 309,
     "genre": "Fantasy"
   },
   {
-    "id": 6,
     "title": "The Hobbit",
     "author": "J.R.R. Tolkien",
     "pages": 310,
     "genre": "Fantasy"
   },
   {
-    "id": 7,
     "title": "Pride and Prejudice",
     "author": "Jane Austen",
     "pages": 279,
     "genre": "Romance"
   },
   {
-    "id": 8,
     "title": "The Hunger Games",
     "author": "Suzanne Collins",
     "pages": 374,
     "genre": "Dystopian"
   },
   {
-    "id": 9,
     "title": "The Da Vinci Code",
     "author": "Dan Brown",
     "pages": 454,
     "genre": "Mystery"
   },
   {
-    "id": 10,
     "title": "The Lord of the Rings: The Fellowship of the Ring",
     "author": "J.R.R. Tolkien",
     "pages": 398,
     "genre": "Fantasy"
   },
   {
-    "id": 11,
     "title": "Brave New World",
     "author": "Aldous Huxley",
     "pages": 288,
     "genre": "Dystopian"
   },
   {
-    "id": 12,
     "title": "The Shining",
     "author": "Stephen King",
     "pages": 447,
     "genre": "Horror"
   },
   {
-    "id": 13,
     "title": "The Road",
     "author": "Cormac McCarthy",
     "pages": 287,
     "genre": "Post-apocalyptic"
   },
   {
-    "id": 14,
     "title": "The Girl with the Dragon Tattoo",
     "author": "Stieg Larsson",
     "pages": 465,
     "genre": "Mystery"
   },
   {
-    "id": 15,
     "title": "The Alchemist",
     "author": "Paulo Coelho",
     "pages": 197,
     "genre": "Fantasy"
   },
   {
-    "id": 16,
     "title": "Frankenstein",
     "author": "Mary Shelley",
     "pages": 280,
     "genre": "Gothic"
   },
   {
-    "id": 17,
     "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
     "author": "C.S. Lewis",
     "pages": 206,
     "genre": "Fantasy"
   },
   {
-    "id": 18,
     "title": "Moby-Dick",
     "author": "Herman Melville",
     "pages": 625,
     "genre": "Adventure"
   },
   {
-    "id": 19,
     "title": "The Grapes of Wrath",
     "author": "John Steinbeck",
     "pages": 464,
     "genre": "Historical Fiction"
   },
   {
-    "id": 20,
     "title": "The Hitchhiker's Guide to the Galaxy",
     "author": "Douglas Adams",
     "pages": 224,
     "genre": "Science Fiction"
   },
   {
-    "id": 21,
     "title": "The Godfather",
     "author": "Mario Puzo",
     "pages": 448,
     "genre": "Crime"
   },
   {
-    "id": 22,
     "title": "The Picture of Dorian Gray",
     "author": "Oscar Wilde",
     "pages": 254,
     "genre": "Gothic"
   },
   {
-    "id": 23,
     "title": "The Count of Monte Cristo",
     "author": "Alexandre Dumas",
     "pages": 1276,
     "genre": "Adventure"
   },
   {
-    "id": 24,
     "title": "One Hundred Years of Solitude",
     "author": "Gabriel García Márquez",
     "pages": 417,
     "genre": "Magical Realism"
   },
   {
-    "id": 25,
     "title": "The Scarlet Letter",
     "author": "Nathaniel Hawthorne",
     "pages": 279,
     "genre": "Historical Fiction"
   },
   {
-    "id": 26,
     "title": "Wuthering Heights",
     "author": "Emily Brontë",
     "pages": 342,
     "genre": "Gothic"
   },
   {
-    "id": 27,
     "title": "The Odyssey",
     "author": "Homer",
     "pages": 541,
     "genre": "Epic"
   },
   {
-    "id": 28,
     "title": "The Old Man and the Sea",
     "author": "Ernest Hemingway",
     "pages": 127,
     "genre": "Adventure"
   },
   {
-    "id": 29,
     "title": "Jane Eyre",
     "author": "Charlotte Brontë",
     "pages": 507,
     "genre": "Gothic"
   },
   {
-    "id": 30,
     "title": "The Brothers Karamazov",
     "author": "Fyodor Dostoevsky",
     "pages": 824,
     "genre": "Philosophical"
   },
   {
-    "id": 31,
     "title": "Crime and Punishment",
     "author": "Fyodor Dostoevsky",
     "pages": 551,
     "genre": "Psychological"
   },
   {
-    "id": 32,
     "title": "Les Misérables",
     "author": "Victor Hugo",
     "pages": 1463,
     "genre": "Historical Fiction"
   },
   {
-    "id": 33,
     "title": "The Three Musketeers",
     "author": "Alexandre Dumas",
     "pages": 636,
     "genre": "Adventure"
   },
   {
-    "id": 34,
     "title": "The Handmaid's Tale",
     "author": "Margaret Atwood",
     "pages": 311,
     "genre": "Dystopian"
   },
   {
-    "id": 35,
     "title": "A Tale of Two Cities",
     "author": "Charles Dickens",
     "pages": 489,
     "genre": "Historical Fiction"
   },
   {
-    "id": 36,
     "title": "The Silence of the Lambs",
     "author": "Thomas Harris",
     "pages": 338,
     "genre": "Thriller"
   },
   {
-    "id": 37,
     "title": "The Stand",
     "author": "Stephen King",
     "pages": 1153,
     "genre": "Post-apocalyptic"
   },
   {
-    "id": 38,
     "title": "The Art of War",
     "author": "Sun Tzu",
     "pages": 38,
     "genre": "Philosophical"
   },
   {
-    "id": 39,
     "title": "The Road to Wigan Pier",
     "author": "George Orwell",
     "pages": 264,
     "genre": "Non-fiction"
   },
   {
-    "id": 40,
     "title": "The Iliad",
     "author": "Homer",
     "pages": 683,
     "genre": "Epic"
   },
   {
-    "id": 41,
     "title": "The Princess Bride",
     "author": "William Goldman",
     "pages": 398,
     "genre": "Fantasy"
   },
   {
-    "id": 42,
     "title": "A Clockwork Orange",
     "author": "Anthony Burgess",
     "pages": 213,
     "genre": "Dystopian"
   },
   {
-    "id": 43,
     "title": "The Girl on the Train",
     "author": "Paula Hawkins",
     "pages": 323,
     "genre": "Thriller"
   },
   {
-    "id": 44,
     "title": "The Martian",
     "author": "Andy Weir",
     "pages": 369,
     "genre": "Science Fiction"
   },
   {
-    "id": 45,
     "title": "The Color Purple",
     "author": "Alice Walker",
     "pages": 295,
     "genre": "Historical Fiction"
   },
   {
-    "id": 46,
     "title": "The Road Not Taken",
     "author": "Robert Frost",
     "pages": 10,
     "genre": "Poetry"
   },
   {
-    "id": 47,
     "title": "The Metamorphosis",
     "author": "Franz Kafka",
     "pages": 201,
     "genre": "Absurdist"
   },
   {
-    "id": 48,
     "title": "The Giver",
     "author": "Lois Lowry",
     "pages": 208,
     "genre": "Dystopian"
   },
   {
-    "id": 49,
     "title": "The Divine Comedy",
     "author": "Dante Alighieri",
     "pages": 798,
     "genre": "Epic"
   },
   {
-    "id": 50,
     "title": "The Stranger",
     "author": "Albert Camus",
     "pages": 123,
     "genre": "Absurdist"
   },
   {
-    "id": 51,
     "title": "The Wind in the Willows",
     "author": "Kenneth Grahame",
     "pages": 256,
     "genre": "Children's"
   },
   {
-    "id": 52,
     "title": "The Joy Luck Club",
     "author": "Amy Tan",
     "pages": 288,
     "genre": "Contemporary"
   },
   {
-    "id": 53,
     "title": "The Joy of Cooking",
     "author": "Irma S. Rombauer",
     "pages": 1152,
     "genre": "Cookbook"
   },
   {
-    "id": 54,
     "title": "The Hound of the Baskervilles",
     "author": "Arthur Conan Doyle",
     "pages": 256,
     "genre": "Mystery"
   },
   {
-    "id": 55,
     "title": "The Diary of a Young Girl",
     "author": "Anne Frank",
     "pages": 283,
     "genre": "Biography"
   },
   {
-    "id": 56,
     "title": "The Adventures of Sherlock Holmes",
     "author": "Arthur Conan Doyle",
     "pages": 307,
     "genre": "Mystery"
   },
   {
-    "id": 57,
     "title": "The Wizard of Oz",
     "author": "L. Frank Baum",
     "pages": 154,
     "genre": "Children's"
   },
   {
-    "id": 58,
     "title": "The Sun Also Rises",
     "author": "Ernest Hemingway",
     "pages": 251,
     "genre": "Modernist"
   },
   {
-    "id": 59,
     "title": "The Glass Castle",
     "author": "Jeannette Walls",
     "pages": 288,
     "genre": "Memoir"
   },
   {
-    "id": 60,
     "title": "The Shining",
     "author": "Stephen King",
     "pages": 447,
     "genre": "Horror"
   },
   {
-    "id": 61,
     "title": "The Outsiders",
     "author": "S.E. Hinton",
     "pages": 192,
     "genre": "Young Adult"
   },
   {
-    "id": 62,
     "title": "The Road Less Traveled",
     "author": "M. Scott Peck",
     "pages": 316,
     "genre": "Self-help"
   },
   {
-    "id": 63,
     "title": "The Martian Chronicles",
     "author": "Ray Bradbury",
     "pages": 222,
     "genre": "Science Fiction"
   },
   {
-    "id": 64,
     "title": "The Help",
     "author": "Kathryn Stockett",
     "pages": 464,
     "genre": "Historical Fiction"
   },
   {
-    "id": 65,
     "title": "The Lovely Bones",
     "author": "Alice Sebold",
     "pages": 328,
     "genre": "Drama"
   },
   {
-    "id": 66,
     "title": "The Art of Happiness",
     "author": "Dalai Lama XIV",
     "pages": 321,
     "genre": "Philosophical"
   },
   {
-    "id": 67,
     "title": "The Hunchback of Notre-Dame",
     "author": "Victor Hugo",
     "pages": 940,
     "genre": "Gothic"
   },
   {
-    "id": 68,
     "title": "The Catcher in the Rye",
     "author": "J.D. Salinger",
     "pages": 224,
     "genre": "Fiction"
   },
   {
-    "id": 69,
     "title": "The Bourne Identity",
     "author": "Robert Ludlum",
     "pages": 523,
     "genre": "Thriller"
   },
   {
-    "id": 70,
     "title": "The Pillars of the Earth",
     "author": "Ken Follett",
     "pages": 973,
     "genre": "Historical Fiction"
   },
   {
-    "id": 71,
     "title": "The Clan of the Cave Bear",
     "author": "Jean M. Auel",
     "pages": 468,
     "genre": "Historical Fiction"
   },
   {
-    "id": 72,
     "title": "The Poisonwood Bible",
     "author": "Barbara Kingsolver",
     "pages": 546,
     "genre": "Fiction"
   },
   {
-    "id": 73,
     "title": "The Shadow of the Wind",
     "author": "Carlos Ruiz Zafón",
     "pages": 487,
     "genre": "Mystery"
   },
   {
-    "id": 74,
     "title": "The Name of the Wind",
     "author": "Patrick Rothfuss",
     "pages": 662,
     "genre": "Fantasy"
   },
   {
-    "id": 75,
     "title": "The Girl with the Pearl Earring",
     "author": "Tracy Chevalier",
     "pages": 352,
     "genre": "Historical Fiction"
   },
   {
-    "id": 76,
     "title": "The Stand",
     "author": "Stephen King",
     "pages": 1153,
