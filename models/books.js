@@ -27,12 +27,20 @@ Book.init(
     },
     genre: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      unique: false,
     },
     pages: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    }
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id"
+      }
+    },
   },
   {
     sequelize,
