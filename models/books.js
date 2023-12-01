@@ -46,7 +46,7 @@ Book.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    modelName: 'book',
+    modelName: 'books',
   }
 );
 
