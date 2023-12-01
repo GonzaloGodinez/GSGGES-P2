@@ -1,11 +1,14 @@
-const { Model, DataTypes, INTEGER } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class Books extends Model {
-
+class Book extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
 }
 
-Books.init(
+Book.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -20,24 +23,31 @@ Books.init(
     author: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: false,
+    },
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false,
     },
     pages: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    genre: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    }, 
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id"
+      }
+    },
   },
-
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,
     modelName: 'books',
   }
 );
 
-module.exports = Books;
+module.exports = Book;

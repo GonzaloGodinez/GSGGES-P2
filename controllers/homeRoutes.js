@@ -1,5 +1,7 @@
 const router = require('express').Router();
-const { Book, User, userBooks } = require('../models');
+
+const { Book, User } = require('../models');
+
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -38,7 +40,7 @@ router.get('/book/:id', async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const book = bookData.get({ plain: true });
 
     res.render('book', {
       ...book,
