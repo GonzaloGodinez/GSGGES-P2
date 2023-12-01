@@ -38,7 +38,7 @@ router.get('/book/:id', async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const book = bookData.get({ plain: true });
 
     res.render('book', {
       ...book,
