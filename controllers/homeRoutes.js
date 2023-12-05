@@ -9,13 +9,13 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: {include: ['first_name']},
         },
       ],
     });
 
     // Serialize data so the template can read it
-    const books = booktData.map((book) => book.get({ plain: true }));
+    const books = bookData.map((book) => book.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
@@ -32,7 +32,7 @@ router.get('/book/:id', async (req, res) => {
     const bookData = await Book.findByPk(req.params.id, {
       include: [
         {
-          model: User,
+          model: Book,
           attributes: ['name'],
         },
       ],
