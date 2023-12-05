@@ -19,4 +19,23 @@ module.exports = {
       return `<span for="img" aria-label="gear">⚙️</span>`;
     }
   },
+  get_book: (book_name) => {
+
+    let name = book_name.replace(/\s+/g, '+')
+
+    const request = async (input) => {
+      const response = await fetch(
+        `https://openlibrary.org/search.json?q=${input}&limit=1`, {
+        method: "GET",
+        mode: "cors"
+      }
+      );
+      const json = await response.json();
+
+      console.log(json.docs[0].title)
+      console.log(json.docs[0].author_name[0])
+    };
+
+    request(name);
+  }
 };
