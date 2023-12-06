@@ -23,19 +23,19 @@ Review.init(
       defaultValue: DataTypes.NOW,
     },
     user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-          model: "user", 
-          key: "id"
-      }
-  },
-  book_id: {
-      type: DataTypes.INTEGER,
-      references: {
-          model: "book",
-          key: "id",
-      }
-  }
+        type: DataTypes.INTEGER,
+        references: {
+            model: "user", 
+            key: "id"
+        }
+    },
+    book_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: "books",
+            key: "id",
+        }
+    }
   },
 
   {
@@ -49,4 +49,4 @@ Review.init(
 
 module.exports = Review;
 
-// Review is saved and the post is updated to display the Review, the Review creator’s username, and the date created
+// Review is saved and the book is updated to display the Review, the Review creator’s username, and the date created

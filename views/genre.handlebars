@@ -1,29 +1,33 @@
 <div class="text-center">
   <h2>Welcome to the Library!</h2>
-  <p>Select a genre:</p>
-  <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="genreDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Genre
-  </button>
-  <div class="dropdown-menu" aria-labelledby="genreDropdown">
-    <a class="dropdown-item" href="/genre/Romance">Romance</a>
-    <a class="dropdown-item" href="/genre/Adventure">Adventure</a>
-    <a class="dropdown-item" href="/genre/Classic">Classic</a>
-    <a class="dropdown-item" href="/genre/Dystopian">Dystopian</a>
-    <a class="dropdown-item" href="/genre/Fiction">Fiction</a>
-    <!-- Add more genres as needed -->
+  <h3>Select a genre:</h3>
+
+
+{{!-- dropdown --}}
+  <div class="dropdown-container">
+    <button onclick="dropMenu()" class="dropbtn">Genre</button>
+    <div class="dropdown-menu" id="dropdown">
+      <a class="dropdown-item" href="/genre/Romance">Romance</a>
+      <a class="dropdown-item" href="/genre/Adventure">Adventure</a>
+      <a class="dropdown-item" href="/genre/Classic">Classic</a>
+      <a class="dropdown-item" href="/genre/Dystopian">Dystopian</a>
+      <a class="dropdown-item" href="/genre/Fiction">Fiction</a>
+      <!-- Add more genres as needed -->
+    </div>
   </div>
+
+
+
 </div>
-</div>
-  <div>
+<div>
   <h2 class="text-white">Books in Selected Genre</h2>
   {{#each books}}
-    <div class="text-white">
-      <h3>{{title}}</h3>
-      <p>Author: {{author}}</p>
-      <p>Genre: {{genre}}</p>
-      <!-- Display other book details as needed -->
-    </div>
+  <div class="text-white">
+    <h3>{{title}}</h3>
+    <p>Author: {{author}}</p>
+    <p>Genre: {{genre}}</p>
+    <!-- Display other book details as needed -->
+  </div>
   {{/each}}
+  <script src="/js/genre.js"></script>
 </div>
-<script src="./js/genre.js"></script>
