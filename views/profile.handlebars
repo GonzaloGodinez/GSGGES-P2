@@ -36,6 +36,23 @@
   <div class="col-md-6 book-list">
   <h3 class="text-white">Books to Read:</h3>
 
+  <div>
+      <h2 class="text-white">Books in Selected Genre</h2>
+      {{#each books}}
+      <div class="text-white">
+        <h3>{{title}}</h3>
+        <p>Author: {{author}}</p>
+        <p>Genre: {{genre}}</p>
+        <!-- Display other book details as needed -->
+        <button class="btn btn-primary add-book" data-id="{{id}}">Add</button>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="col-md-6 book-list">
+  <h3 class="text-white">Books to Read:</h3>
+
   {{#each userBooks as |book|}}
   <div class="row mb-2">
     <div class="col-md-8">
