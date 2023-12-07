@@ -1,6 +1,7 @@
 const User = require('./User');
 const Book = require('./book');
 const Review = require('./review');
+const UserBook = require('./userBook'); // Corrected the path
 
 User.hasMany(Book, {
   foreignKey: 'user_id',
@@ -9,6 +10,7 @@ User.hasMany(Book, {
 Book.belongsTo(User, {
   foreignKey: 'user_id'
 });
+
 Review.belongsTo(User, {
   foreignKey: 'user_id'
 });
@@ -28,4 +30,14 @@ Book.hasMany(Review, {
   onDelete: 'CASCADE'
 });
 
-module.exports = { User, Book, Review };
+UserBook.belongsTo(User, { 
+  foreignKey: 'user_id', 
+});
+
+UserBook.belongsTo(Book, { 
+  foreignKey: 'book_id', 
+});
+
+
+
+module.exports = { User, Book, Review, UserBook};

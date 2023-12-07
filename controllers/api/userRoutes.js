@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { User } = require('../../models'); // Import User model
+const { User, Book, UserBook } = require('../../models'); // Import User model
 const bcrypt = require('bcrypt');
 
 router.post('/', async (req, res) => {
@@ -82,31 +82,74 @@ router.post('/logout', (req, res) => {
 router.post('/add-book/:bookId', async (req, res) => {
   try {
     const { bookId } = req.params;
-    const userId = req.session.user_id; // Assuming you have the user ID in the session
+    const userId = req.session.user_id;
 
-    // Find the user by ID
     const user = await User.findByPk(userId);
-
-    if (!user) {
-      res.status(404).json({ message: 'User not found' });
-      return;
-    }
-
-    // Find the book by ID
     const book = await Book.findByPk(bookId);
 
-    if (!book) {
-      res.status(404).json({ message: 'Book not found' });
-      return;
+    if (!user || !book) {
+      return res.status(404).json({ message: 'User or Book not found' });
     }
 
-    // Add the book to the user's 'Read Next' list
-    await user.addBook(book);
+    // Create a UserBook entry to associate the user with the selected book
+    const newBook = await UserBook.create({
+      title: book.title,
+      author: book.author,
+      genre: book.genre,
+      pages: book.pages, // Adjust this based on your Book model
+      user_id: userId,
+    });
 
     res.status(200).json({ message: 'Book added to Read Next list' });
   } catch (err) {
+    console.error(err);
     res.status(500).json(err);
   }
 });
+
+router.get('/books-to-read', async (req, res) => {
+  try {
+    const userId = req.session.user_id; // Assuming user ID is stored in the session
+
+    // Fetch books associated with the user from the database
+    const userBooks = await UserBook.findAll({
+      where: { user_id: userId },
+      attributes: ['id', 'title', 'author', 'genre', 'pages'], // Select specific attributes you want to retrieve
+    });
+
+    res.status(200).json(userBooks);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+router.delete('/remove-book/:bookId', async (req, res) => {
+  try {
+    const { bookId } = req.params;
+    const userId = req.session.user_id; // Get the user ID from the session
+
+    // Check if the book exists in the user's list
+    const userBook = await UserBook.findOne({
+      where: {
+        id: bookId,
+        user_id: userId,
+      },
+    });
+
+    if (!userBook) {
+      return res.status(404).json({ message: 'Book not found in user list' });
+    }
+
+    // Delete the book from the user's list
+    await userBook.destroy();
+
+    res.status(200).json({ message: 'Book removed from user list' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 
 module.exports = router;
