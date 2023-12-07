@@ -23,7 +23,7 @@ router.post('/signup', async (req, res) => {
     const { name, email, password } = req.body;
 
     // Hash the password before storing it
-    // const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password, 10);
 
     const userData = await User.create({ name, email, password: hashedPassword });
 
@@ -51,7 +51,7 @@ router.post('/login', async (req, res) => {
       console.log('Password from User Input:', password);
 
       // Compare passwords using bcrypt
-      const passwordMatch = await bcrypt.compare(password, userData.password);
+       const passwordMatch = await bcrypt.compare(password, userData.password);
 
       if (passwordMatch) {
         // Password matches, set session and respond with success message
