@@ -32,10 +32,10 @@ const sess = {
 
 
 // Setup cloudinary server
-cloudinary.config({ 
-  cloud_name: 'dtc03w2me', 
-  api_key: '665518628271374', 
-  api_secret: 'aMSy9ADGX_AQbKFumx1KxbQkB-4' 
+cloudinary.config({
+  cloud_name: 'dtc03w2me',
+  api_key: '665518628271374',
+  api_secret: 'aMSy9ADGX_AQbKFumx1KxbQkB-4'
 });
 // images to add
 const images = [
@@ -63,24 +63,29 @@ const images = [
 ];
 
 // Function to upload images to Cloudinary
-const uploadImages = () => {
-  // Loop through each image path
-  images.forEach((imagePath) => {
-    const publicId = imagePath.split("/").pop().split(".")[0]; // Extracting public_id from the file path
+// const uploadImages = () => {
+//   // Loop through each image path
+//   images.forEach((imagePath) => {
+//     const publicId = imagePath.split("/").pop().split(".")[0]; // Extracting public_id from the file path
 
-    // Upload image to Cloudinary
-    cloudinary.uploader.upload(imagePath, { public_id: publicId }, (error, result) => {
-      if (error) {
-        console.error(`Error uploading ${imagePath}:`, error);
-      } else {
-        console.log(`Upload successful for ${imagePath}:`, result);
-      }
-    });
-  });
-};
+//     // Upload image to Cloudinary
+//     cloudinary.uploader.upload(imagePath, {
+//       public_id: publicId,
+//       transformation: [
+//         { height: 500, width: 300 }
+//       ]
+//     }, (error, result) => {
+//       if (error) {
+//         console.error(`Error uploading ${imagePath}:`, error);
+//       } else {
+//         console.log(`Upload successful for ${imagePath}:`, result);
+//       }
+//     });
+//   });
+// };
 
-// Call the function to upload images
-uploadImages();
+// // Call the function to upload images
+// uploadImages();
 
 app.use(session(sess));
 
@@ -98,7 +103,7 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
 
-app.get('/js/genre.js', function(req, res) {
+app.get('/js/genre.js', function (req, res) {
   res.type('application/javascript');
   res.sendFile(__dirname + '/js/genre.js');
 });

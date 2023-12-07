@@ -6,31 +6,30 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3 class="text-white">Select a Genre:</h3>
+    <h3>Select a Genre to Start the Search:</h3>
 
-    <div class="dropdown-container">
-      <button onclick="dropMenu()" class="dropbtn">Genre</button>
-      <div class="dropdown-menu" id="dropdown">
-        <a class="dropdown-item" href="/genre/Romance">Romance</a>
-        <a class="dropdown-item" href="/genre/Adventure">Adventure</a>
-        <a class="dropdown-item" href="/genre/Classic">Classic</a>
-        <a class="dropdown-item" href="/genre/Dystopian">Dystopian</a>
-        <a class="dropdown-item" href="/genre/Fiction">Fiction</a>
-        <!-- Add more genres as needed -->
-      </div>
-    </div>
 
-    <div>
-      <h2 class="text-white">Books in Selected Genre</h2>
-      {{#each books}}
-      <div class="text-white">
-        <h3>{{title}}</h3>
-        <p>Author: {{author}}</p>
-        <p>Genre: {{genre}}</p>
-        <!-- Display other book details as needed -->
-        <button class="btn btn-primary add-book" data-id="{{id}}">Add</button>
-      </div>
-      {{/each}}
+    <div class="dropdown">
+    <button onclick="myFunction()" "dropbtn">Genre</button>
+    <div class="dropdown-content" id="myDropdown">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <a class="dropdown-item" href="/genre/All">All</a>
+      <a class="dropdown-item" href="/genre/Romance">Romance</a>
+      <a class="dropdown-item" href="/genre/Adventure">Adventure</a>
+      <a class="dropdown-item" href="/genre/Classic">Classic</a>
+      <a class="dropdown-item" href="/genre/Dystopian">Dystopian</a>
+      <a class="dropdown-item" href="/genre/Fiction">Fiction</a>
+      <a class="dropdown-item" href="/genre/Coming-of-Age">Coming-of-Age</a>
+      <a class="dropdown-item" href="/genre/Fantasy">Fantasy</a>
+      <a class="dropdown-item" href="/genre/Modernist">Modernist</a>
+      <a class="dropdown-item" href="/genre/Magical-Realism">Magical Realism</a>
+      <a class="dropdown-item" href="/genre/Epic-Poetry">Epic Poetry</a>
+      <a class="dropdown-item" href="/genre/Gothic-Fiction">Gothic Fiction</a>
+      <a class="dropdown-item" href="/genre/Science-Fiction">Science Fiction</a>
+      <a class="dropdown-item" href="/genre/Gothic-Science-Fiction">Gothic Science Fiction</a>
+      <a class="dropdown-item" href="/genre/Historical-Fiction">Historical Fiction</a>
+      <a class="dropdown-item" href="/genre/Post-Apocalyptic">Post-Apocalyptic</a>
+      <a class="dropdown-item" href="/genre/Horror">Horror</a>
     </div>
   </div>
 
@@ -52,3 +51,4 @@
 </div>
 
 <script src="./js/profile.js"></script>
+<script src="./js/genre.js"></script>

@@ -1,10 +1,12 @@
 const router = require('express').Router();
+const cloudinary = require('cloudinary').v2
 
 const { Book, User } = require('../models');
 
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
+  
   try {
     const bookData = await Book.findAll({
       include: [
@@ -19,7 +21,7 @@ router.get('/', async (req, res) => {
 
     res.render('homepage', {
       books,
-      logged_in: req.session.logged_in,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -78,6 +80,7 @@ router.get('/login', (req, res) => {
 
 // clicking genre gets the books in that genre
 router.get('/genre/:genre', async (req, res) => {
+
   try {
     const { genre } = req.params;
 

@@ -1,5 +1,3 @@
-
-
 function dropMenu() {
   document.getElementById("dropdown").classList.toggle("show");
 }
@@ -43,6 +41,7 @@ function renderFilteredBooks(selectedGenre) {
 
 // Add event listener to handle genre selection
 document.querySelectorAll('.dropdown-item').forEach(item => {
+  item.addEventListener('click', function() {
   item.addEventListener('click', function() {
     const selectedGenre = this.getAttribute('href').split('/').pop();
     console.log("Selected Genre:", selectedGenre); // Log the selected genre

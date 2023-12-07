@@ -6,6 +6,7 @@
     <button onclick="myFunction()" "dropbtn">Genre</button>
     <div class="dropdown-content" id="myDropdown">
       <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <a class="dropdown-item" href="/genre/All">All</a>
       <a class="dropdown-item" href="/genre/Romance">Romance</a>
       <a class="dropdown-item" href="/genre/Adventure">Adventure</a>
       <a class="dropdown-item" href="/genre/Classic">Classic</a>
@@ -21,17 +22,20 @@
       <a class="dropdown-item" href="/genre/Gothic-Science-Fiction">Gothic Science Fiction</a>
       <a class="dropdown-item" href="/genre/Historical-Fiction">Historical Fiction</a>
       <a class="dropdown-item" href="/genre/Post-Apocalyptic">Post-Apocalyptic</a>
+      <a class="dropdown-item" href="/genre/Horror">Horror</a>
     </div>
   </div>
   <h2 class="text-white">Books in Selected Genre</h2>
-  <div class="filtered-books">
+  <div class="filtered-books books_container">
     {{#each books}}
-    <div class="text-white">
-      <h3>{{title}}</h3>
-      <p>Author: {{author}}</p>
-      <p>Genre: {{genre}}</p>
-      <!-- Display other book details as needed -->
-      <button class="btn btn-primary add-book" data-id="{{id}}">Add</button>
+    <div class="book_container">
+      <div class="image_container"><img class="cloud_img" src="{{image}}" alt="cloudinary_image"></div>
+      <div class="info_card">
+        <h3 class="book_title">{{title}}</h3>
+        <p class="book_author">Author: {{author}}</p>
+        <p class="book_genre">Genre: {{genre}}</p>
+      </div>
+      <button class="add-book" data-id="{{id}}">Add</button>
     </div>
     {{/each}}
   </div>
