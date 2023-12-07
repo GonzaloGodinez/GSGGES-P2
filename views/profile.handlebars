@@ -1,41 +1,43 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{first_name}}!</h2>
   </div>
 </div>
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Add a New Book:</h3>
+    <h3>Select a Genre:</h3>
 
-    <form class="form new-book-form">
-      <div class="form-group">
-        <label for="book-title">Book Title:</label>
-        <input class="form-input" type="text" id="book-title" name="book-title" />
+    <div class="dropdown-container">
+      <button onclick="dropMenu()" class="dropbtn">Genre</button>
+      <div class="dropdown-menu" id="dropdown">
+        <a class="dropdown-item" href="/genre/Romance">Romance</a>
+        <a class="dropdown-item" href="/genre/Adventure">Adventure</a>
+        <a class="dropdown-item" href="/genre/Classic">Classic</a>
+        <a class="dropdown-item" href="/genre/Dystopian">Dystopian</a>
+        <a class="dropdown-item" href="/genre/Fiction">Fiction</a>
+        <!-- Add more genres as needed -->
       </div>
-      <div class="form-group">
-        <label for="book-author">Author:</label>
-        <input class="form-input" type="text" id="book-author" name="book-author" />
+    </div>
+
+    <div>
+      <h2 class="text-white">Books in Selected Genre</h2>
+      {{#each books}}
+      <div class="text-white">
+        <h3>{{title}}</h3>
+        <p>Author: {{author}}</p>
+        <p>Genre: {{genre}}</p>
+        <!-- Display other book details as needed -->
+        <button class="btn btn-primary add-book" data-id="{{id}}">Add</button>
       </div>
-      <div class="form-group">
-        <label for="book-genre">Genre:</label>
-        <select class="form-input" id="book-genre" name="book-genre">
-          <option value="romance">Romance</option>
-          <option value="adventure">Adventure</option>
-          <!-- Add more genre options here -->
-        </select>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Add Book</button>
-      </div>
-    </form>
+      {{/each}}
+    </div>
   </div>
 
-  {{#if books.length}}
   <div class="col-md-6 book-list">
     <h3>Books to Read:</h3>
 
-    {{#each books as |book|}}
+    {{#each readNextBooks as |book|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/book/{{book.id}}">{{book.title}}</a> by {{book.author}}</h4>
@@ -47,7 +49,6 @@
     </div>
     {{/each}}
   </div>
-  {{/if}}
 </div>
 
 <script src="./js/profile.js"></script>

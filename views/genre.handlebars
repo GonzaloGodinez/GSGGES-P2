@@ -2,8 +2,6 @@
   <h2>Welcome to the Library!</h2>
   <h3>Select a genre:</h3>
 
-
-{{!-- dropdown --}}
   <div class="dropdown-container">
     <button onclick="dropMenu()" class="dropbtn">Genre</button>
     <div class="dropdown-menu" id="dropdown">
@@ -16,18 +14,16 @@
     </div>
   </div>
 
-
-
-</div>
-<div>
-  <h2 class="text-white">Books in Selected Genre</h2>
-  {{#each books}}
-  <div class="text-white">
-    <h3>{{title}}</h3>
-    <p>Author: {{author}}</p>
-    <p>Genre: {{genre}}</p>
-    <!-- Display other book details as needed -->
+  <div>
+    <h2 class="text-white">Books in Selected Genre</h2>
+    {{#each books}}
+    <div class="text-white">
+      <h3>{{title}}</h3>
+      <p>Author: {{author}}</p>
+      <p>Genre: {{genre}}</p>
+      <!-- Display other book details as needed -->
+    </div>
+    {{/each}}
+    <script src="/js/genre.js"></script>
   </div>
-  {{/each}}
-  <script src="/js/genre.js"></script>
 </div>
