@@ -20,12 +20,12 @@ router.post('/', async (req, res) => {
 
 router.post('/signup', async (req, res) => {
   try {
-    const { first_name, email, password } = req.body;
+    const { name, email, password } = req.body;
 
     // Hash the password before storing it
-    const hashedPassword = await bcrypt.hash(password, 10);
+    // const hashedPassword = await bcrypt.hash(password, 10);
 
-    const userData = await User.create({ first_name, email, password: hashedPassword });
+    const userData = await User.create({ name, email, password: hashedPassword });
 
     req.session.save(() => {
       req.session.user_id = userData.id;
@@ -34,6 +34,7 @@ router.post('/signup', async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });
