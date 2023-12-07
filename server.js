@@ -44,3 +44,8 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+app.get('/js/genre.js', function(req, res) {
+  res.type('application/javascript');
+  res.sendFile(__dirname + '/js/genre.js');
+});
