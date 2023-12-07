@@ -31,8 +31,13 @@
       {{{ body }}}
     </main>
     <footer>
-      
+
     </footer>
+  </div>
+  <div class="image-container">
+    {{#each cloudinaryImages}}
+    <img src="{{this.url}}" alt="{{this.alt}}" class="book-image">
+    {{/each}}
   </div>
 
   <!-- Render script for logged in users only -->
