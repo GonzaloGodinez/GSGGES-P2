@@ -22,8 +22,27 @@
       <p>Author: {{author}}</p>
       <p>Genre: {{genre}}</p>
       <!-- Display other book details as needed -->
+      <button class="btn btn-primary add-book" data-id="{{id}}">Add</button>
     </div>
     {{/each}}
-    <script src="/js/genre.js"></script>
+  </div>
+
+  <div class="col-md-6 book-list">
+    <h3>Books to Read:</h3>
+
+    {{#each readNextBooks as |book|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/book/{{book.id}}">{{book.title}}</a> by {{book.author}}</h4>
+        <p>Genre: {{book.genre}}</p>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{book.id}}">REMOVE</button>
+      </div>
+    </div>
+    {{/each}}
   </div>
 </div>
+
+<script src="/js/genre.js"></script>
+<script src="/js/profile.js"></script>
