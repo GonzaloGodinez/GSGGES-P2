@@ -63,29 +63,29 @@ const images = [
 ];
 
 // Function to upload images to Cloudinary
-const uploadImages = () => {
-  // Loop through each image path
-  images.forEach((imagePath) => {
-    const publicId = imagePath.split("/").pop().split(".")[0]; // Extracting public_id from the file path
+// const uploadImages = () => {
+//   // Loop through each image path
+//   images.forEach((imagePath) => {
+//     const publicId = imagePath.split("/").pop().split(".")[0]; // Extracting public_id from the file path
 
-    // Upload image to Cloudinary
-    cloudinary.uploader.upload(imagePath, {
-      public_id: publicId,
-      transformation: [
-        { height: 500, width: 300 }
-      ]
-    }, (error, result) => {
-      if (error) {
-        console.error(`Error uploading ${imagePath}:`, error);
-      } else {
-        console.log(`Upload successful for ${imagePath}:`, result);
-      }
-    });
-  });
-};
+//     // Upload image to Cloudinary
+//     cloudinary.uploader.upload(imagePath, {
+//       public_id: publicId,
+//       transformation: [
+//         { height: 500, width: 300 }
+//       ]
+//     }, (error, result) => {
+//       if (error) {
+//         console.error(`Error uploading ${imagePath}:`, error);
+//       } else {
+//         console.log(`Upload successful for ${imagePath}:`, result);
+//       }
+//     });
+//   });
+// };
 
-// Call the function to upload images
-uploadImages();
+// // Call the function to upload images
+// uploadImages();
 
 app.use(session(sess));
 
