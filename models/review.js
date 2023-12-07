@@ -32,7 +32,7 @@ Review.init(
     book_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: "books",
+            model: "book",
             key: "id",
         }
     }
