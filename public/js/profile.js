@@ -153,4 +153,3 @@ if (event.target.classList.contains('btn-danger')) {
   }
 }
 });
-
