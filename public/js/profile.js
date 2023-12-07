@@ -110,14 +110,17 @@ try {
       const bookDiv = document.createElement('div');
       bookDiv.classList.add('row', 'mb-2');
       bookDiv.innerHTML = `
-        <div class="col-md-8">
-          <h4><a href="/book/${book.id}">${book.title}</a> by ${book.author}</h4>
-          <p>Genre: ${book.genre}</p>
-        </div>
-        <div class="col-md-4">
-          <button class="btn btn-sm btn-danger remove-book" data-id="${book.id}">REMOVE</button>
-        </div>
-      `;
+  <div class="col-md-2">
+    <img src="${book.image}" alt="${book.title}" class="book-image">
+  </div>
+  <div class="col-md-6">
+    <h4><a href="/book/${book.id}">${book.title}</a> by ${book.author}</h4>
+    <p>Genre: ${book.genre}</p>
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-sm btn-danger remove-book" data-id="${book.id}">REMOVE</button>
+  </div>
+`;
       bookList.appendChild(bookDiv);
     });
   } else {
