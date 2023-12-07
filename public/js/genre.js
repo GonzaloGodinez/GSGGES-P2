@@ -7,6 +7,21 @@ const books = [
 
 // Function to render filtered books based on selected genre
 function renderFilteredBooks(selectedGenre) {
+
+    // if (true) {
+    //     const response = await fetch('/api/users/', {
+    //       method: 'POST',
+    //       body: JSON.stringify({ first_name, email, password }),
+    //       headers: { 'Content-Type': 'application/json' },
+    //     });
+    
+    //     if (response.ok) {
+    //       document.location.replace('/profile');
+    //     } else {
+    //       alert(response.statusText);
+    //     }
+    //   }
+
   const filteredBooks = selectedGenre === 'all' ? books : books.filter(book => book.genre === selectedGenre);
   const bookList = document.querySelector('.filtered-books');
   bookList.innerHTML = ''; // Clear previous books
@@ -25,7 +40,10 @@ function renderFilteredBooks(selectedGenre) {
 }
 
 // Initial render with all books
-renderFilteredBooks('all');
+window.addEventListener('load', function(event) {
+    renderFilteredBooks('all');
+});
+
 
 function dropMenu() {
   document.getElementById("dropdown").classList.toggle("show");

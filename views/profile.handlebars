@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{first_name}}!</h2>
+    <h2 class="text-white">Welcome, {{first_name}}!</h2>
   </div>
 </div>
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Select a Genre:</h3>
+    <h3 class="text-white">Select a Genre:</h3>
 
     <div class="dropdown-container">
       <button onclick="dropMenu()" class="dropbtn">Genre</button>
@@ -35,20 +35,20 @@
   </div>
 
   <div class="col-md-6 book-list">
-    <h3>Books to Read:</h3>
+  <h3 class="text-white">Books to Read:</h3>
 
-    {{#each readNextBooks as |book|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/book/{{book.id}}">{{book.title}}</a> by {{book.author}}</h4>
-        <p>Genre: {{book.genre}}</p>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{book.id}}">REMOVE</button>
-      </div>
+  {{#each userBooks as |book|}}
+  <div class="row mb-2">
+    <div class="col-md-8">
+      <h4><a href="/book/{{book.id}}">{{book.title}}</a> by {{book.author}}</h4>
+      <p>Genre: {{book.genre}}</p>
     </div>
-    {{/each}}
+    <div class="col-md-4">
+      <button class="btn btn-sm btn-danger" data-id="{{book.id}}">REMOVE</button>
+    </div>
   </div>
+  {{/each}}
+</div>
 </div>
 
 <script src="./js/profile.js"></script>
