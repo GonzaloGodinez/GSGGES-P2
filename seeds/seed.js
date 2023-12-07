@@ -1,6 +1,7 @@
 const sequelize = require('../config/connection');
 const { Book, User, Review } = require('../models');
 const { get_book } = require('../utils/helpers')
+
 const bcrypt = require('bcrypt');
 const userData = require('./userData.json');
 const bookData = require('./bookData.json');
