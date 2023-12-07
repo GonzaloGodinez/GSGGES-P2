@@ -181,6 +181,7 @@ document.querySelector('.dropbtn').onclick = function(event) {
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
       }
+    }}}
 // renderFilteredBooks('all');
 
 function myFunction() {
