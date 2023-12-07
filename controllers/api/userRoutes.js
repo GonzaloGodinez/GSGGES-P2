@@ -62,4 +62,34 @@ router.post('/logout', (req, res) => {
   }
 });
 
+router.post('/add-book/:bookId', async (req, res) => {
+  try {
+    const { bookId } = req.params;
+    const userId = req.session.user_id; // Assuming you have the user ID in the session
+
+    // Find the user by ID
+    const user = await User.findByPk(userId);
+
+    if (!user) {
+      res.status(404).json({ message: 'User not found' });
+      return;
+    }
+
+    // Find the book by ID
+    const book = await Book.findByPk(bookId);
+
+    if (!book) {
+      res.status(404).json({ message: 'Book not found' });
+      return;
+    }
+
+    // Add the book to the user's 'Read Next' list
+    await user.addBook(book);
+
+    res.status(200).json({ message: 'Book added to Read Next list' });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
