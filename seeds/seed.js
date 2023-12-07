@@ -1,9 +1,10 @@
 const sequelize = require('../config/connection');
-const { Book, User } = require('../models');
+const { Book, User, Review } = require('../models');
 const { get_book } = require('../utils/helpers')
 
 const userData = require('./userData.json');
 const bookData = require('./bookData.json');
+const reviewData = require('./reviewData.json');
 
 console.log(get_book('the lord of the rings'))
 
