@@ -1,19 +1,16 @@
 [
   {
-    "first_name": "Sal",
-    "last_name": "General",
+    "name": "General",
     "email": "sal@hotmail.com",
     "password": "p123"
   },
   {
-    "first_name": "Jerimo",
-    "last_name": "Witsky",
+    "name": "Witsky",
     "email": "lernantino@gmail.com",
     "password": "p234"
   },
   {
-    "first_name": "Amiko",
-    "last_name": "Suzuki",
+    "name": "Suzuki",
     "email": "amiko2k20@aol.com",
     "password": "p345"
   }

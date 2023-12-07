@@ -52,7 +52,7 @@
     "title": "One Hundred Years of Solitude",
     "author": "Gabriel Garcia Marquez",
     "pages": 417,
-    "genre": "Magical Realism",
+    "genre": "Magical-Realism",
     "image": "./images/one-hundred-years-of-solitude.jpg"
   },
   {
@@ -80,35 +80,35 @@
     "title": "The Odyssey",
     "author": "Homer",
     "pages": 541,
-    "genre": "Epic Poetry",
+    "genre": "Epic-Poetry",
     "image": "./images/the-odyssey.jpg"
   },
   {
     "title": "Jane Eyre",
     "author": "Charlotte Brontë",
     "pages": 532,
-    "genre": "Gothic Fiction",
+    "genre": "Gothic-Fiction",
     "image": "./images/jane-eyre.jpg"
   },
   {
     "title": "The Hitchhiker's Guide to the Galaxy",
     "author": "Douglas Adams",
     "pages": 193,
-    "genre": "Science Fiction",
+    "genre": "Science-Fiction",
     "image": "./images/the-hitchhikers-guide-to-the-galaxy.jpg"
   },
   {
     "title": "Frankenstein",
     "author": "Mary Shelley",
     "pages": 280,
-    "genre": "Gothic Science Fiction",
+    "genre": "Gothic-Science-Fiction",
     "image": "./images/frankenstein.jpg"
   },
   {
     "title": "The Grapes of Wrath",
     "author": "John Steinbeck",
     "pages": 464,
-    "genre": "Historical Fiction",
+    "genre": "Historical-Fiction",
     "image": "./images/The-Grapes-of-Wrath.jpg"
   },
   {
@@ -122,7 +122,7 @@
     "title": "Wuthering Heights",
     "author": "Emily Brontë",
     "pages": 342,
-    "genre": "Gothic Fiction",
+    "genre": "Gothic-Fiction",
     "image": "./images/wuthering-heights.jpg"
   },
   {
