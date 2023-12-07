@@ -41,9 +41,9 @@ View, Add, updates and delete models for:
 ## Samples
 
 ![Main page Library Management System](./Assets/Library%20Manag%20Syst%20Front%20pg.png)
-![Home Login bar tab page](./Assets/Library%20Manag%20Syst%20Front%20pg.png)
-![Drop Down Menu](./Assets/Library%20Manag%20Syst%20Front%20pg.png)
-![Review](./Assets/Library%20Manag%20Syst%20Front%20pg.png)
+![Home Welcome Login pg](./Assets/LMSWelcomePg.png)
+![Drop Down Menu](./Assets/LMSDropDownMenu.png)
+![Welcome pg after log out](./Assets/LMSWelcPgafterlogout.png)
 
 
 
