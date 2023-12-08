@@ -141,25 +141,6 @@ const books = [
   }
 ];
 
-// Function to render filtered books based on selected genre
-function renderFilteredBooks(selectedGenre) {
-  const filteredBooks = selectedGenre === 'all' ? books : books.filter(book => book.genre === selectedGenre);
-  const bookList = document.querySelector('.filtered-books');
-  bookList.innerHTML = ''; // Clear previous books
-
-  filteredBooks.forEach(book => {
-    const bookDiv = document.createElement('div');
-    bookDiv.classList.add('row', 'mb-2');
-    bookDiv.innerHTML += `
-        <div class="col-md-8">
-          <h4><a href="/book/${book.id}">${book.title}</a> by ${book.author}</h4>
-          <p>Genre: ${book.genre}</p>
-        </div>
-      `;
-    bookList.appendChild(bookDiv);
-  });
-}
-
 // Initial render with all books
 window.addEventListener('load', function(event) {
     renderFilteredBooks('all');

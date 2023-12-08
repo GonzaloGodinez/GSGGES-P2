@@ -17,27 +17,27 @@ window.onclick = function(event) {
 }
 
 // Function to render filtered books based on selected genre
-function renderFilteredBooks(selectedGenre) {
-  const filteredBooks = selectedGenre === 'all' ? books : books.filter(book => book.genre === selectedGenre);
-  const bookList = document.querySelector('.book-list');
+// function renderFilteredBooks(selectedGenre) {
+//   const filteredBooks = selectedGenre === 'all' ? books : books.filter(book => book.genre === selectedGenre);
+//   const bookList = document.querySelector('.book-list');
 
-  bookList.innerHTML = '';
+//   bookList.innerHTML = '';
 
-  filteredBooks.forEach(book => {
-    const bookDiv = document.createElement('div');
-    bookDiv.classList.add('row', 'mb-2');
-    bookDiv.innerHTML = `
-      <div class="col-md-8">
-        <h4><a href="/book/${book.id}">${book.title}</a> by ${book.author}</h4>
-        <p>Genre: ${book.genre}</p>
-        <button class="btn btn-primary add-book" data-id="${book.id}">Add</button>
-      </div>
-    `;
-    bookList.appendChild(bookDiv);
-  });
+//   filteredBooks.forEach(book => {
+//     const bookDiv = document.createElement('div');
+//     bookDiv.classList.add('row', 'mb-2');
+//     bookDiv.innerHTML = `
+//       <div class="col-md-8">
+//         <h4><a href="/book/${book.id}">${book.title}</a> by ${book.author}</h4>
+//         <p>Genre: ${book.genre}</p>
+//         <button class="btn btn-primary add-book" data-id="${book.id}">Add</button>
+//       </div>
+//     `;
+//     bookList.appendChild(bookDiv);
+//   });
 
-  console.log("Filtered Books:", filteredBooks); // Log the filtered books
-}
+//   console.log("Filtered Books:", filteredBooks); // Log the filtered books
+// }
 
 // Add event listener to handle genre selection
 document.querySelectorAll('.dropdown-item').forEach(item => {
@@ -56,6 +56,7 @@ function getUserIdFromSession() {
 }
 
 const userId = getUserIdFromSession(); // Function to get the user ID from the session
+console.log(userId)
 
 // Handle click on the "Add" button for each book
 document.addEventListener('click', async function(event) {
