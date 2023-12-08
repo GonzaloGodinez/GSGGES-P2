@@ -34,6 +34,10 @@ UserBook.init(
             type: DataTypes.INTEGER,
             allowNull: false,
           },
+          image: {
+            type: DataTypes.STRING,
+            allowNull: true,
+          },
           user_id: {
             type: DataTypes.INTEGER,
             references: {

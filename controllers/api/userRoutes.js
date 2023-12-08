@@ -51,7 +51,7 @@ router.post('/login', async (req, res) => {
       console.log('Password from User Input:', password);
 
       // Compare passwords using bcrypt
-      const passwordMatch = await bcrypt.compare(password, userData.password);
+       const passwordMatch = await bcrypt.compare(password, userData.password);
 
       if (passwordMatch) {
         // Password matches, set session and respond with success message
@@ -98,6 +98,7 @@ router.post('/add-book/:bookId', async (req, res) => {
       genre: book.genre,
       pages: book.pages, // Adjust this based on your Book model
       user_id: userId,
+      image: book.image,
     });
 
     res.status(200).json({ message: 'Book added to Read Next list' });

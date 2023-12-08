@@ -1,3 +1,5 @@
+
+
 function dropMenu() {
   document.getElementById("dropdown").classList.toggle("show");
 }
@@ -60,9 +62,15 @@ const userId = getUserIdFromSession(); // Function to get the user ID from the s
 // Handle click on the "Add" button for each book
 document.addEventListener('click', async function(event) {
 if (event.target.classList.contains('add-book')) {
+  
   const bookId = event.target.dataset.id;
-  const bookDetails = books.find(book => book.id === parseInt(bookId));
-
+  var bookelement  = event.target.parentElement;
+  var dataElement = bookelement.children[2];
+  var bookDetails = {title: dataElement.dataset.title, author: dataElement.dataset.author,genre: dataElement.dataset.genre}
+  // const bookDetails = books.find(book => book.id === parseInt(bookId));
+  console.log(dataElement);
+console.log(bookDetails);
+console.log(bookId);
   if (bookDetails) {
     try {
       const response = await fetch(`/api/users/add-book/${bookId}`, {
@@ -108,14 +116,17 @@ try {
       const bookDiv = document.createElement('div');
       bookDiv.classList.add('row', 'mb-2');
       bookDiv.innerHTML = `
-        <div class="col-md-8">
-          <h4><a href="/book/${book.id}">${book.title}</a> by ${book.author}</h4>
-          <p>Genre: ${book.genre}</p>
-        </div>
-        <div class="col-md-4">
-          <button class="btn btn-sm btn-danger remove-book" data-id="${book.id}">REMOVE</button>
-        </div>
-      `;
+  <div class="col-md-2">
+    <img src="${book.image}" alt="${book.title}" class="book-image">
+  </div>
+  <div class="col-md-6">
+    <h4><a href="/book/${book.id}">${book.title}</a> by ${book.author}</h4>
+    <p>Genre: ${book.genre}</p>
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-sm btn-danger remove-book" data-id="${book.id}">REMOVE</button>
+  </div>
+`;
       bookList.appendChild(bookDiv);
     });
   } else {
@@ -152,3 +163,4 @@ if (event.target.classList.contains('btn-danger')) {
   }
 }
 });
+
