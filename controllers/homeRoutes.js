@@ -84,17 +84,28 @@ router.get('/genre/:genre', async (req, res) => {
   try {
     const { genre } = req.params;
 
-    const bookData = await Book.findAll({
-      where: {
-        genre: genre // Filter by the selected genre
-      },
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
+    if (genre === "All") {
+      var bookData = await Book.findAll({
+        include: [
+          {
+            model: User,
+            attributes: ['name'],
+          },
+        ],
+      });
+    } else {
+      var bookData = await Book.findAll({
+        where: {
+          genre: genre // Filter by the selected genre
         },
-      ],
-    });
+        include: [
+          {
+            model: User,
+            attributes: ['name'],
+          },
+        ],
+      });
+    }
 
     const books = bookData.map((book) => book.get({ plain: true }));
 

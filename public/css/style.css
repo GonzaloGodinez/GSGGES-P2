@@ -1,3 +1,7 @@
+* {
+  text-decoration: none;
+}
+
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
@@ -8,13 +12,11 @@ header, .project:not(:last-child) {
   padding: 0;
   cursor: pointer;
   color: #1b89bc;
-  text-decoration: none;
   font-size: 100%;
 }
 
 .no-button:hover {
   color: #065b83;
-  text-decoration: underline;
 }
 
 .dollar-amount {
@@ -85,7 +87,6 @@ body {
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
-  text-decoration: none;
   display: block;
 }
 
@@ -149,4 +150,44 @@ body {
   background-color: rgba(245, 245, 220, 0.781);
   border-radius: 10px;
   z-index:3;
+}
+
+/* ///////////// homepage //////////////// */
+.homepage_container {
+  margin: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(245, 245, 220, 0.877);
+  border-radius: 20px;
+  height: 60vh;
+  color: #1b89bc;
+  font-size: 24px;
+
+}
+.homepage_container div button {
+  border: solid black 1px;
+  border-radius: 10px;
+  padding: 5px;
+  color: black;
+}
+.homepage_container h2,.homepage_container h3 {
+  padding: 30px 0;
+  font-size: 40px;
+}
+.genre_btnn:hover {
+  background-color: white;
+  text-decoration: none;
+}
+
+.login-form,.signup-form {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.row {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.856);
+  border-radius: 10px;
 }
