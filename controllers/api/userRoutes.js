@@ -98,6 +98,7 @@ router.post('/add-book/:bookId', async (req, res) => {
       genre: book.genre,
       pages: book.pages, // Adjust this based on your Book model
       user_id: userId,
+      image: book.image,
     });
 
     res.status(200).json({ message: 'Book added to Read Next list' });

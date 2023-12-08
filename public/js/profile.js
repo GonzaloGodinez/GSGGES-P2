@@ -62,9 +62,11 @@ const userId = getUserIdFromSession(); // Function to get the user ID from the s
 // Handle click on the "Add" button for each book
 document.addEventListener('click', async function(event) {
 if (event.target.classList.contains('add-book')) {
+  
   const bookId = event.target.dataset.id;
   const bookDetails = books.find(book => book.id === parseInt(bookId));
-
+console.log(bookDetails);
+console.log(bookId);
   if (bookDetails) {
     try {
       const response = await fetch(`/api/users/add-book/${bookId}`, {
