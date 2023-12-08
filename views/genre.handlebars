@@ -35,6 +35,7 @@
         <p class="book_author">Author: {{author}}</p>
         <p class="book_genre">Genre: {{genre}}</p>
       </div>
+      <div id = "book{{id}}" style = "display: 'none'" data-title="{{title}}" data-author="{{author}}" data-genre="{{genre}}"></div>
       <button class="add-book" data-id="{{id}}">Add</button>
     </div>
     {{/each}}

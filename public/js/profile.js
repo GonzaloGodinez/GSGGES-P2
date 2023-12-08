@@ -64,7 +64,11 @@ document.addEventListener('click', async function(event) {
 if (event.target.classList.contains('add-book')) {
   
   const bookId = event.target.dataset.id;
-  const bookDetails = books.find(book => book.id === parseInt(bookId));
+  var bookelement  = event.target.parentElement;
+  var dataElement = bookelement.children[2];
+  var bookDetails = {title: dataElement.dataset.title, author: dataElement.dataset.author,genre: dataElement.dataset.genre}
+  // const bookDetails = books.find(book => book.id === parseInt(bookId));
+  console.log(dataElement);
 console.log(bookDetails);
 console.log(bookId);
   if (bookDetails) {
