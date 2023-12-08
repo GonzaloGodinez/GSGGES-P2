@@ -4,12 +4,12 @@
 [link to Library repository url github](https://github.com/GonzaloGodinez/gsgges-p2)
  
 ## link to Heroku
-[link to Heroku](https://gsgges-p2-2fedddb9c7c5.herokuapp.com/)
+[link to Heroku](https://gsgges-p2-01b3ebe075ed.herokuapp.com/)
 
 ## Description
 We created our full stack app using on the back end using servers, MYSQL JAWS, ORM, ADVANCE API's, and user authentication on the from end using MVC and handlebars, stored our project code in GitHub, managing our project utiliziging Git hub branches and pull requests.
 
-We implemented GET and POSTS and Put"updates" for retrieving, adding new and update data. 
+We implemented GET and POSTS for retrieving and adding data. 
 
 ## Table of Contents
 
@@ -29,10 +29,10 @@ We implemented GET and POSTS and Put"updates" for retrieving, adding new and upd
 8.  At the command line type run npm i 
 9.  At the command line type npm run seed
 7.	Then at the command line
-8.  Follow the prompts.
+8.  Sign into Heroku login
 
 ## Usage
-Creates theblogger_db database.
+Creates library_db database.
 View, Add, updates and delete models for:
 -   Book
 -   Content
