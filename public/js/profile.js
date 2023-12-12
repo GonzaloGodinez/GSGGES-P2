@@ -67,7 +67,7 @@ if (event.target.classList.contains('add-book')) {
   const bookId = event.target.dataset.id;
   var bookelement  = event.target.parentElement;
   var dataElement = bookelement.children[2];
-  var bookDetails = {title: dataElement.dataset.title, author: dataElement.dataset.author,genre: dataElement.dataset.genre}
+  var bookDetails = {title: dataElement.dataset.title, author: dataElement.dataset.author,genre: dataElement.dataset.genre,image: dataElement.dataset.image}
   // const bookDetails = books.find(book => book.id === parseInt(bookId));
   console.log(dataElement);
 console.log(bookDetails);
@@ -84,7 +84,8 @@ console.log(bookId);
           bookId: bookId,
           title: bookDetails.title,
           author: bookDetails.author,
-          genre: bookDetails.genre
+          genre: bookDetails.genre,
+          image: bookDetails.image
         })
       });
 
